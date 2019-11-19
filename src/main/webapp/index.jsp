@@ -49,7 +49,7 @@
                         <i class="fa fa-key"></i>
                     </span>
                     <!--   Password Input-->
-                    <input class="form-input" type="password" placeholder="Password" id="pwd"  name="contrasena" required>
+                    <input class="form-input" type="password" placeholder="Contraseña" id="pwd"  name="contrasena" required>
      
                     <!-- Show/hide password  -->
                     <span>
