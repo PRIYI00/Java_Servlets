@@ -19,6 +19,7 @@
 
 </head>
 <body>
+	<a href="index.jsp"> Volver </a> <br>
     <div class="overlay">
         <!-- LOGN IN FORM by Omar Dsoky -->
         <form action="datosFormulario" method="post">

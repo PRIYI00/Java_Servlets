@@ -10,6 +10,7 @@
     <a href="ejemplos/html/posicionamiento.jsp"> Posicionamiento </a> <br>
     <a href="ejemplos/js/game.jsp"> Arkanoid </a> <br>
     <a href="login.jsp"> Login </a> <br>
+    <a href="indexCalculadora.jsp"> Calculadora </a> <br>
 </nav>
             
 <main>

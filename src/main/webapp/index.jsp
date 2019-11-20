@@ -12,7 +12,10 @@
         
         <%@include file="includes/navegacion.jsp"%>
         
+        <i class="fas fa-eye"></i>
+        
         <h3> Voluntario <span id="nombre"> X </span> </h3>
+        
         <button onclick="buscarVoluntario()"> ¿Quien Lee? </button>
     
         <h2> Basic HTML Table </h2>
