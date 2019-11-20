@@ -8,12 +8,6 @@
   
 */
 
-/* reset basico para eliminar estilos de todos los browser - user-agent */
-/**{
-    margin: 0;
-    padding: 0;
-}*/
-
 /* Estructura de una plantilla css */
 /*
     1. Reset.
@@ -25,17 +19,27 @@
     7. FontAwsome
 */
 
-body{
-    font-size: 16px;
+/* reset basico para eliminar estilos de todos los browser - user-agent */
+/**{
+    margin: 0;
+    padding: 0;
+}*/
+
+@import url("reset.css");
+@import url("normalize.css");
+@import url("impresora.css") print;
+
+
+body {
     font-family: Arial, sans-serif;
     /*text-align: center;*/
 }
 
-img{
+img {
     width: 100%;
 }
 
-code{
+code {
     color: red;
     background-color: lightgray;
     font-family: monospace;
@@ -51,12 +55,12 @@ h1 , h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-table{
+table {
     width: 50%;
     margin: auto;
 }
 
-td{
+td {
     width: 50%; 
     border:1px solid #000;     /* shorthand */
 
@@ -70,7 +74,7 @@ td{
     text-transform: capitalize;
 }
 
-td:hover{
+td:hover {
     background-color: pink;
 }   
 
@@ -102,6 +106,7 @@ input[type="text"]:invalid {
 }
 
 .parallax h1{    
+	margin-top: 0;
     padding-top: 4em;
 }
 .parallax h2{

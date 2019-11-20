@@ -1,4 +1,5 @@
 <nav>
+	<a href="index.jsp"> Inicio </a> <br>
 	<a href="ejemplos/css/animaciones.jsp"> Animaciones </a> <br>
     <a href="ejemplos/html/etiquetas_basicas.jsp"> Ejemplos </a> <br>
     <a href="ejemplos/css/basico.jsp"> CSS Basico </a> <br>
@@ -11,6 +12,7 @@
     <a href="ejemplos/js/game.jsp"> Arkanoid </a> <br>
     <a href="login.jsp"> Login </a> <br>
     <a href="indexCalculadora.jsp"> Calculadora </a> <br>
+    <a href="ejemplos/css/flexbox.jsp"> Flex Box </a> <br>
 </nav>
             
 <main>

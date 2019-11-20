@@ -1,3 +1,6 @@
+<%
+   	String titulo = "HelloWeb | Enlace Get";
+%>
 <%@include file="includes/cabecera.jsp" %>
 <%@include file="includes/navegacion.jsp" %>
 
