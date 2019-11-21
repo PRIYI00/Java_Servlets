@@ -1,0 +1,19 @@
+@keyframes mymove {
+    from {
+        background-color: #0099CC;  
+        border-radius: 0;
+    }
+    to {
+        background-color:red;  
+        border-radius: 50%;
+    }
+  }
+
+.box-animacion{
+
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: #0099CC;  
+    animation: mymove 2s infinite alternate;
+}

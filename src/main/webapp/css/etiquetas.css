@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    /*text-align: center;*/
+}
+
+img {
+    width: 100%;
+}
+
+code {
+    color: red;
+    background-color: lightgray;
+    font-family: monospace;
+}
+
+h1{
+    color: #09C;
+    font-size: 3em;
+    text-align: center;
+}
+
+h1 , h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+table {
+    width: 50%;
+    margin: auto;
+}
+
+td {
+    width: 50%; 
+    border:1px solid #000;     /* shorthand */
+
+    /*
+    border-width: 1px;
+    border-color: #000;
+    border-style: solid;
+    */
+
+    text-align: center;
+    text-transform: capitalize;
+}
+
+td:hover {
+    background-color: pink;
+}   
+
+input[type="text"] {
+    padding: 2px 0 2px 5px;
+}
+
+input[type="text"]:valid {
+    color: green;
+}
+
+input[type="text"]:invalid {
+    color: red;
+}

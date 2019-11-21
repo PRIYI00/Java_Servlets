@@ -1,0 +1,50 @@
+.parallax{
+
+  background-image: url("/helloweb/images/PhotobyAmyHirschionUnsplash.jpg");  
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax h1{    
+	margin-top: 0;
+    padding-top: 4em;
+}
+.parallax h2{
+    padding-top: 0.5em;
+}
+
+.box {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    
+    border: 2px solid teal;
+    background-color: royalblue;
+    border-radius: 10px;
+
+    color: white;
+    font-size: 5em;
+    text-align: center;
+}
+
+.nav-wrapper {
+	background-color: teal;
+	padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.footer-wrapper {
+	position: fixed;
+	background-color: black;
+	bottom: 0;
+	width: 100%;
+}
