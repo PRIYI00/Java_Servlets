@@ -7,11 +7,16 @@
         <title> <%=titulo%> </title>
         
         <base href="/helloweb/">
+        
+        <!-- Responsive -->
+        <meta name ="viewport" content="width=device-width , initial-scale=1.0"/>
 
         <!-- Se meten los Estilos -->
         
         <!-- Estilos de FontAwesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+        	<!-- Para el Navegador -->
+        	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
         <!-- Mis Estilos -->
         <link rel="stylesheet" href="css/styles.css?time=<%=System.currentTimeMillis()%>">

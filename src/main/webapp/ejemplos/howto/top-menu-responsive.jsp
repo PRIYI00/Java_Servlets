@@ -1,56 +1,11 @@
-.parallax{
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  background-image: url("/helloweb/images/PhotobyAmyHirschionUnsplash.jpg");  
-
-  /* Set a specific height */
-  height: 500px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.parallax h1{    
-	margin-top: 0;
-    padding-top: 4em;
-}
-.parallax h2{
-    padding-top: 0.5em;
-}
-
-.box {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 100px;
-    height: 100px;
-    
-    border: 2px solid teal;
-    background-color: royalblue;
-    border-radius: 10px;
-
-    color: white;
-    font-size: 5em;
-    text-align: center;
-}
-
-.nav-wrapper {
-	background-color: teal;
-	padding: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-
-.footer-wrapper {
-	position: fixed;
-	background-color: teal;
-	bottom: 0;
-	width: 100%;
-}
-
-/* Clase para hacer el Navegador con Responsive */
+<style>
+body {margin:0;font-family:Arial}
 
 .topnav {
   overflow: hidden;
@@ -151,3 +106,44 @@
     text-align: left;
   }
 }
+</style>
+</head>
+<body>
+
+<nav class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</nav>
+
+<div style="padding-left:16px">
+  <h2>Responsive Topnav with Dropdown</h2>
+  <p>Resize the browser window to see how it works.</p>
+  <p>Hover over the dropdown button to open the dropdown menu.</p>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+</body>
+</html>

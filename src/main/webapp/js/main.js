@@ -18,3 +18,13 @@ function buscarVoluntario(){
     var alumnos = ["Iker", "Aitor", "Endika", "Iñigo", "Kiryl", "Juan Carlos", "Maria", "Ana", "Alejandro", "Cristian", "Erlantz", "Raul", "Joseba", "Mikel"];
     document.getElementById('nombre').innerHTML = alumnos[Math.floor(Math.random() * alumnos.length)];
 }
+
+// Funcion para el Menu Responsive
+function myFunction() {
+	var x = document.getElementById("myTopnav");
+	  if (x.className === "topnav") {
+	    x.className += " responsive";
+	 } else {
+	    x.className = "topnav";
+	 }
+}

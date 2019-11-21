@@ -1,6 +1,11 @@
 body {
     font-family: Arial, sans-serif;
-    /*text-align: center;*/
+    margin: 0;
+}
+
+p {
+	line-height: 30px;
+	text-align: justify;
 }
 
 img {
@@ -40,6 +45,20 @@ td {
 
     text-align: center;
     text-transform: capitalize;
+}
+
+ol, ul, dl {
+	padding-left: 20px;
+	margin-top: 20px;
+}
+
+ol li {
+	list-style-type: decimal;
+	line-height: 25px;
+}
+
+ul li {
+	list-style-type: circle;
 }
 
 td:hover {
