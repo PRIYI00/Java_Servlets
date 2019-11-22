@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> HelloWeb | Selectores Avanzados </title>
+<%
+	String titulo = "HelloWeb | Selectores Avanzados";
+%>
+   		
+<%@include file="../../includes/cabecera.jsp"%>
+<%@include file="../../includes/navegacion.jsp"%>
 
-    <base href="/helloweb/">
     <style>
         p {
             color: teal;
@@ -52,9 +50,7 @@
             color: blue; 
         }
     </style>
-</head>
-<body>
-    <a class="externo" href="index.jsp"> Volver </a>
+
     <h1> Selectores Avanzados </h1>
 
     <section> 
@@ -78,5 +74,5 @@
         <a href="https://www.youtube.com/"> Youtube </a> <br>
         <a href="https://www.google.es/"> Google </a> <br> 
     </section>
-</body>
-</html>
+    
+<%@include file="../../includes/piepagina.jsp"%>

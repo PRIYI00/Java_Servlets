@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Box Model </title>
+<%
+	String titulo = "HelloWeb | Box Model";
+%>
+   		
+<%@include file="../../includes/cabecera.jsp"%>
+<%@include file="../../includes/navegacion.jsp"%>
 
-    <base href="/helloweb/">
     <style>
         body {
             padding: 20px;
@@ -56,9 +54,7 @@
             box-shadow: 20px 20px 10px 0px rgba(0,0,0,0.34);
         }
     </style>
-</head>
-<body>
-    <a href="index.jsp"> Volver </a>
+
     <h1> Visualización </h1>
     <section>
         <h2> Box Model </h2>
@@ -116,5 +112,5 @@
         <div class="box" style="z-index: 0; position: relative; left: 50px; background-color: red;">2</div>
         <div class="box" style="z-index: 1; position: relative;">3</div>
     </section>
-</body>
-</html>
+
+<%@include file="../../includes/piepagina.jsp"%>

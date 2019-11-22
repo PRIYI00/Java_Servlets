@@ -1,5 +1,13 @@
-<h1>Resultado</h1>
+<%
+	String titulo = "HelloWeb | Resultado";
+%>
+   		
+<%@include file="includes/cabecera.jsp"%>
+<%@include file="includes/navegacion.jsp"%>
 
+
+<h1>Resultado</h1>
+<section>
 <%
 	//recibir atributos del controlador
 	String mensaje = (String)request.getAttribute("mensaje");	
@@ -21,3 +29,6 @@
 <% } // final del if %>	
 
 <a href="indexCalculadora.jsp"> Volver a Calcular </a>
+</section>
+
+<%@include file="includes/piepagina.jsp"%>

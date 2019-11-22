@@ -3,9 +3,10 @@
    		%>
    		
    		<%@include file="../../includes/cabecera.jsp"%>
+   		<%@include file="../../includes/navegacion.jsp"%>
    		
-        <h2 id="top"> Ejemplo de Etiquetas </h2>
-
+    <h1 id="top"> Ejemplos de Etiquetas </h1>
+	<section>
         <!-- Ejemplos de Enlaces -->
         
         <!-- Enlace a otra pagina en otra Pestaña -->
@@ -18,7 +19,9 @@
         <!-- Enlace de Ejemplos de telefono y email -->
         <a href="mailto:info@telepizza.com"> info@telepizza.com </a> <br>
         <a href="tel:944500577"> 944 50 05 77 </a> <br> <br>
-
+	</section>
+	
+	<section>
         <!-- Ejemplo de caption en una tabla -->
         <div>
             <table>
@@ -60,9 +63,10 @@
                 </tr>
             </table>
         </div>
-
+	</section>
         <br> <br>
 
+	<section>
         <!-- Ejemplo de Parrafos -->
 
         <p> 
@@ -85,25 +89,31 @@
             Voluptas assumenda quis exercitationem, molestiae aut neque cumque explicabo 
             onsectetur adipisci natus!
         </p>
-
+	</section>
         <br> <br>
 
+	<section>
         <!-- Ejemplo de Listas -->
-
+        
+		<div>
         <!-- Ejemplo de lista ordenada -->
         <ol>
             <li> Punto Uno </li>
             <li> Punto Dos </li>
             <li> Punto Tres </li>
         </ol>
-
+		</div>
+		
+		<div>
         <!-- Ejemplo de lista desordenada -->
         <ul>
             <li> Punto Uno </li>
             <li> Punto Dos </li>
             <li> Punto Tres </li>
         </ul>
-
+		</div>
+		
+		<div>
         <!-- Ejemplo de dl -->
         <dl>
             <dt>Beast of Bodmin</dt>
@@ -115,16 +125,19 @@
             <dt>Owlman</dt>
             <dd>A giant owl-like creature.</dd>
         </dl>
-
+        </div>
+	</section>
         <br> <br>
-
+	
+	<section>
         <!-- Ejemplo de una Imagen -->
         <div>
-            <img src="/PruebaTecnica/images/html5-cheat-sheet.png" alt="Etiquetas HTML5">
+            <img src="images/html5-cheat-sheet.png" alt="Etiquetas HTML5">
         </div>
-
+	</section>
         <br> <br>
 
+	<section>
         <!-- Ejemplo DataList con Formulario -->
         <form action="#" method="get">
             <input list="browsers" name="browser">
@@ -137,9 +150,10 @@
             </datalist>
             <input type="submit">
         </form>
-
+	</section>
         <br> <br>
 
+	<section>
         <!-- Ejemplo de iframe con Google Maps -->
         <div class="mapouter">
             <div class="gmap_canvas">
@@ -154,10 +168,12 @@
                 .gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}
             </style>
         </div>
-
+	</section>
         <br> <br>
 
+	<section>
         <!-- Enlace a una parte del propio html -->
         <a href="ejemplos/html/etiquetas_basicas.jsp#top"> Vete Arriba </a> <br>
-    </body>
-    </html>
+	</section>
+
+<%@include file="../../includes/piepagina.jsp"%>

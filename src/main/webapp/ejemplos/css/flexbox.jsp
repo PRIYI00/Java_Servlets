@@ -50,13 +50,13 @@
 }
 </style>
 
-<div class="container">
+<section class="container">
 	<div> Hijo 1 </div>
 	<div> Hijo 2 </div>
 	<div> Hijo 3 </div>
 	<div> Hijo 4 </div>
 	<div> Hijo 5 </div>
 	<div> Hijo 6 </div>
-</div>
+</section>
 
 <%@include file="../../includes/piepagina.jsp"%>

@@ -12,11 +12,9 @@
         
         <%@include file="includes/navegacion.jsp"%>
         
-        <i class="fas fa-eye"></i>
-        
         <h3> Voluntario <span id="nombre"> X </span> </h3>
         
-        <button onclick="buscarVoluntario()"> ¿Quien Lee? </button>
+        <button class="botonVoluntario" onclick="buscarVoluntario()"> ¿Quien Lee? </button>
     <section>
         <h2> Basic HTML Table </h2>
         <a target="_blank" href="https://www.w3schools.com/html/html_tables.asp"> Documentación y Ejemplo </a>

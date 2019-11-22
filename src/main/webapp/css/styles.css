@@ -17,6 +17,7 @@
     5. Clases 
     6. Ids (cosas mas especificas)
     7. FontAwsome
+    8. Media-Querys
 */
 
 @import url("reset.css");
@@ -26,5 +27,6 @@
 @import url("layouts.css");
 @import url("clases.css");
 @import url("custom.css");
+@import url("media-querys.css");
 
 @import url("impresora.css") print;

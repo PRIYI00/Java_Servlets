@@ -16,7 +16,6 @@
     <title> Login Maquetación </title>
 
     <link rel="stylesheet" href="css/csslogin.css"> 
-
 </head>
 <body>
 	<a href="index.jsp"> Volver </a> <br>

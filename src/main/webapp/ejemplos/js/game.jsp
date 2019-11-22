@@ -1,20 +1,17 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Arkanoid </title>
+<%
+	String titulo = "HelloWeb | Arkanoid";
+%>
+   		
+<%@include file="../../includes/cabecera.jsp"%>
 
-    <link rel="stylesheet" href="/helloweb/css/game.css">
-</head>
-<body>
-    <a href="/helloweb/index.jsp"> Volver </a> <br>
-    <a href="https://developer.mozilla.org/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro"> Tutorial Arkanoid Canvas </a> <br>
-    
+<link rel="stylesheet" href="css/game.css?time=<%=System.currentTimeMillis()%>">
+
+<%@include file="../../includes/navegacion.jsp"%> 
+
     <h1> Arkanoid </h1>
-    <canvas id="myCanvas" width="480" height="320"> </canvas>
+    <section>
+    	<a href="https://developer.mozilla.org/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro"> Tutorial Arkanoid Canvas </a> <br>
+    	<canvas id="myCanvas" width="480" height="320"> </canvas>
+    </section>
 
-    <script src="/helloweb/js/game.js"> </script>
-</body>
-</html>
+<%@include file="../../includes/piepagina.jsp"%>

@@ -21,9 +21,12 @@ main {
 }
 
 footer {
-    color: white;
+    color: black;
     max-width: 1024px;
     margin: auto;
-    display: flex;
-    justify-content: space-between;
+    padding: 10px;
+}
+
+footer a:visited {
+	color: black;
 }

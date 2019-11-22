@@ -1,42 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> HelloWeb | Posicionamiento </title>
+<%
+	String titulo = "HelloWeb | Posicionamiento";
+%>
+   		
+<%@include file="../../includes/cabecera.jsp"%>
+<%@include file="../../includes/navegacion.jsp"%>
 
-    <base href="/helloweb/">
-
-    <style>
-        .box {
-            display: inline-block;
-            box-sizing: border-box;
-            width: 100px;
-            height: 100px;
-            
-            border: 2px solid teal;
-            background-color: royalblue;
-            border-radius: 10px;
-
-            color: white;
-            font-size: 5em;
-            text-align: center;
-        }
-        section {
-            border: 1px solid rgb(206, 205, 205);
-            background-color: rgb(245, 245, 245);
-            padding: 10px;
-            margin-bottom: 5px;
-
-            -webkit-box-shadow: 20px 20px 10px 0px rgba(0,0,0,0.34);
-            -moz-box-shadow: 20px 20px 10px 0px rgba(0,0,0,0.34);
-            box-shadow: 20px 20px 10px 0px rgba(0,0,0,0.34);
-        }
-    </style>
-</head>
-<body>
-    <a href="index.jsp"> Volver </a>
     <h1> Posicionamiento </h1>
 
     <!-- Se trata del posicionamiento que utilizan los navegadores si no se indica lo contrario. -->
@@ -134,5 +102,4 @@
         </div>
     </section>
 
-</body>
-</html>
+<%@include file="../../includes/piepagina.jsp"%>

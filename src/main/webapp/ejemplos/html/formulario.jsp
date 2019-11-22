@@ -3,12 +3,9 @@
    		%>
    		
    		<%@include file="../../includes/cabecera.jsp"%>
+   		<%@include file="../../includes/navegacion.jsp"%>
 
 	<style>
-        body {
-            max-width: 1024px;
-            
-        }
         form {
             border: 1px solid black;
             padding: 20px;
@@ -24,8 +21,6 @@
     <p> <code> placeholder </code> se utiliza para poner un texto semi visible dentro 
         del <code> input type="text" </code> 
     </p>
-    
-    <a href="index.jsp"> Volver </a> <br>
 
     <form>
         <fieldset>
@@ -108,5 +103,5 @@
 
         <input type="submit" value="Enviar">
     </form>
-</body>
-</html>
+
+    <%@include file="../../includes/piepagina.jsp"%>

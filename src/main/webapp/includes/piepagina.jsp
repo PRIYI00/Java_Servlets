@@ -3,16 +3,13 @@
 <div class="footer-wrapper">
 	
 	<footer>
-		<div>
-			Iker Pedrejón Galán 
-		</div>
-		<div>
-			<a href="https://github.com/PRIYI00/Java_Servlets" target="_blanck"> <span class="fas fa-eye"></span> </a>
-		</div>
+		<a href="https://github.com/PRIYI00/Java_Servlets" target="_blanck"> <span class="fab fa-github"> Iker Pedrejón Galán  </span> </a>
 	</footer>
 
     <!-- JavaScript -->
-        <script src="js/main.js">  </script>
+    <script src="js/main.js">  </script>
+    <script src="js/game.js"> </script>
+    <script src="js/login.js">  </script>
 </div>	
     </body>
 </html>
