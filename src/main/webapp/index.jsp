@@ -24,6 +24,7 @@
         <div>
                 
                 <table>
+                	<caption> Alumnos y Profesor </caption>
                     <tr>
                         <td> Aitor </td>
                         <td>  </td>

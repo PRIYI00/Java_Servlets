@@ -32,11 +32,19 @@ h1 , h2, h3, h4, h5, h6 {
 table {
     width: 50%;
     margin: auto;
+    border: 1px solid black;
+}
+
+table caption {
+	background-color: black;
+	color: white;
+	padding: 5px;
 }
 
 td {
     width: 50%; 
     border:1px solid #000;     /* shorthand */
+    padding: 8px;
 
     /*
     border-width: 1px;
@@ -46,6 +54,14 @@ td {
 
     text-align: center;
     text-transform: capitalize;
+}
+
+table tr:nth-child(odd) {
+	background-color: lightgray;
+}
+
+table tr:nth-child(even) {
+	background-color: teal;
 }
 
 ol, ul, dl {
