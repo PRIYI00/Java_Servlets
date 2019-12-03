@@ -7,9 +7,9 @@
 	</footer>
 
     <!-- JavaScript -->
-    <script src="js/main.js">  </script>
-    <script src="js/game.js"> </script>
-    <script src="js/login.js">  </script>
+    <script src="js/main.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/login.js"></script>
 </div>	
     </body>
 </html>

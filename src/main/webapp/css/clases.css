@@ -57,7 +57,7 @@
 /* Clase para hacer el Navegador con Responsive */
 
 .topnav {
-  overflow: hidden;
+  overflow-y: auto;
   background-color: teal;
 }
 
