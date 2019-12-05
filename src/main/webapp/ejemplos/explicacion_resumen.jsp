@@ -19,40 +19,42 @@
 </head>
 <body>
 	
-	<h1> Resumen de la Explicación </h1>
-	
-	<section>
-		<p style="border: 1px solid black; font-size: 20px; color: red;">
-		 	Este ejercicio es para responder al cliente de distintas maneras.
-		</p>
-	</section>
-	
-	<section>
-	<div style="display: flex; border: 1px solid black;">
-		<div class="servlet" style="border: 1px solid black; width: 50%;">
-			<h2> Servlet </h2>
-			<p> Ejemplo para aprender como recibir peticiones del cliente y respondiendole solo usando servlet. </p>
-			<form action="ejemplo01" method="GET">
-				<label for="nombre"> USUARIO: </label>
-				<input type="text" name="nombre"> <br>
-				<label for="password"> CONTRASEÑA: </label>
-				<input type="password" name="password"> <br>
-				<input type="submit" value="Enviar">
-			</form>
-		</div>
-		<div class="servletjsp" style="border: 1px solid black; width: 50%;">
-			<h2> Servlet + JSP </h2>
-			<p> Otro controlador para ver como se hace lo mismo pero mezclando servlet y jsp. </p>
-			<form action="../ejemplo02" method="GET">
-				<label for="nombre"> USUARIO: </label>
-				<input type="text" name="nombre"> <br>
-				<label for="password"> CONTRASEÑA: </label>
-				<input type="password" name="password"> <br>
-				<input type="submit" value="Enviar">
-			</form>
-		</div>
-	</div>
-	</section>
+	<main class="container">
+		<h1> Resumen de la Explicación </h1>
+		
+		<section>
+			<p style="border: 1px solid black; font-size: 20px; color: red;">
+			 	Este ejercicio es para responder al cliente de distintas maneras.
+			</p>
+		</section>
+		
+		<section>
+			<div style="display: flex; border: 1px solid black;">
+				<div class="servlet" style="border: 1px solid black; width: 50%;">
+					<h2> Servlet </h2>
+					<p> Ejemplo para aprender como recibir peticiones del cliente y respondiendole solo usando servlet. </p>
+					<form action="ejemplo01" method="GET">
+						<label for="nombre"> USUARIO: </label>
+						<input type="text" name="nombre"> <br>
+						<label for="password"> CONTRASEÑA: </label>
+						<input type="password" name="password"> <br>
+						<input type="submit" value="Enviar">
+					</form>
+				</div>
+				<div class="servletjsp" style="border: 1px solid black; width: 50%;">
+					<h2> Servlet + JSP </h2>
+					<p> Otro controlador para ver como se hace lo mismo pero mezclando servlet y jsp. </p>
+					<form action="../ejemplo02" method="GET">
+						<label for="nombre"> USUARIO: </label>
+						<input type="text" name="nombre"> <br>
+						<label for="password"> CONTRASEÑA: </label>
+						<input type="password" name="password"> <br>
+						<input type="submit" value="Enviar">
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
 	
 	<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

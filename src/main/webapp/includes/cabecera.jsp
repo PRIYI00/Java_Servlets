@@ -24,6 +24,20 @@
     </head>
 
     <body>
-
+    
+    <section id="usuario">
+    	<%
+    		String usuario = (String)session.getAttribute("usuarioLogeado");
+    		String idioma = (String)session.getAttribute("idioma");
+    		
+    		if(usuario == null && idioma == null){
+    			%> <a href="login.jsp"> Por favor Inicia Sesion </a> <% 
+    		} else {
+    	%>
+		    	<p> Usuario: <%=usuario%> </p>
+		    	<p> Idioma: <%=idioma%> </p>
+		    	<p> <a href="logout"> Cerrar Sesión </a></p>
+		 <% } %>
+    </section>
 
         

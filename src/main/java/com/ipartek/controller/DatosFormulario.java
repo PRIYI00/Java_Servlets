@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class DatosFormulario
@@ -33,6 +34,12 @@ public class DatosFormulario extends HttpServlet {
 		String idioma = request.getParameter("idioma");
 		
 		if ("admin".equals(nombre) && "admin".equals(pass)) {
+			
+			// Recuperar Sesion del Usuario
+			HttpSession session = request.getSession();
+			session.setAttribute("usuarioLogeado", "Administrador");
+			session.setAttribute("idioma", idioma);
+			session.setMaxInactiveInterval(-1);
 			
 			switch (idioma) {
 			case "castellano":
