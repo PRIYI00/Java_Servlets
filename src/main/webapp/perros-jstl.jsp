@@ -10,7 +10,7 @@
 </c:if>
 
 <c:if test="${empty mensaje}">
-	<p> No ahi ningun Mensaje </p>
+	<p> No ahi ningun Mensaje, vamos a inicializarlo. </p>
 </c:if>
 
 <h2> Tenemos ${fn:length(perros)} perros en Adopción </h2>
