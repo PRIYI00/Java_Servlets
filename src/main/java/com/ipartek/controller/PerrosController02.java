@@ -17,10 +17,10 @@ import com.ipartek.modelo.pojos.Perro;
 /**
  * Servlet implementation class PerrosController
  */
-@WebServlet("/perros")
-public class PerrosController extends HttpServlet {
+@WebServlet("/perros02")
+public class PerrosController02 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private final static Logger LOG = Logger.getLogger(PerrosController.class);
+	private final static Logger LOG = Logger.getLogger(PerrosController02.class);
     private ArrayList<Perro> perros = new ArrayList<Perro>();
     private int indice = 0;
     private String mensaje = "";
@@ -54,7 +54,7 @@ public class PerrosController extends HttpServlet {
     	// Listar Perros
     	request.setAttribute("mensaje", mensaje);
     	request.setAttribute("perros", perros);
-    	request.getRequestDispatcher("perros.jsp").forward(request, response);
+    	request.getRequestDispatcher("perros-jstl.jsp").forward(request, response);
     }
 
 	/**

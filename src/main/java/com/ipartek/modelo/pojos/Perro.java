@@ -18,6 +18,11 @@ public class Perro {
 		this.foto = "https://www.google.es/url?sa=i&url=https%3A%2F%2Fwww.ngenespanol.com%2Fanimales%2Fresistirse-mirada-tierna-perros%2F&psig=AOvVaw3_J0G2dcq1wtF6QwW0-ZJh&ust=1575618038251000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMCCm5GBnuYCFQAAAAAdAAAAABAG";
 	}
 
+	public Perro(int id, String nombre) {
+		this.id = id;
+		this.nombre = nombre;
+	}
+	
 	public Perro(int id, String nombre, String foto) {
 		this.id = id;
 		this.nombre = nombre;

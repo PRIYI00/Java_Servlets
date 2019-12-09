@@ -6,6 +6,12 @@
 <%@include file="includes/cabecera.jsp"%>
 <%@include file="includes/navegacion.jsp"%>
 
+<%
+	String mensaje = (String)request.getAttribute("mensaje");
+%>
+
+<p style="color: teal; font-size: 2em;"> <%=mensaje%> </p>
+
 <h1>Perros</h1>
 
 
@@ -15,24 +21,34 @@
 
 <h2> Listado </h2>
 
-<ol>
+<ul>
 	<% for ( Perro p :  perros ){ %>
-		<li><%=p.getNombre()%> - <%=p.getId()%></li>
+		<li> <%=p.getId()%> - <%=p.getNombre()%>
+			<img src="<%=p.getFoto()%>" style="width: 100px; height: 100px;"> 
+			<a href="perros?id=<%=p.getId()%>&adoptar=s"> Adoptar </a>
+			<a href="perros?id=<%=p.getId()%>&editar=s"> Modificar </a>
+		</li>
 	<% } %>
-</ol>
+</ul>
 
 <hr>
 
 <h2> Formulario </h2>
 
+<%
+	Perro perroEditar = (Perro)request.getAttribute("perroEditar");
+	if(perroEditar == null){
+		perroEditar = new Perro();
+	}
+%>
+
 <form action="perros" method="post">
-	<input name="nombre" placeholder="Nombre del Perro">
-	<select name="doglist">
-		<option value=""> </option>
-  		<% for ( Perro p :  perros ){ %>
-  		<option value="<%=p.getNombre()%>"> <%=p.getNombre()%> </option>
-  		<% } %>
-	</select>		
+	<input type="text" name="id" placeholder="ID" value="<%=perroEditar.getId()%>" required readonly>
+	<br>
+	<input type="text" name="nombre" placeholder="Nombre del Perro" value="<%=perroEditar.getNombre()%>" required>
+	<br>
+	<input type="text" name="imagen" placeholder="Imagen del Perro" value="<%=perroEditar.getFoto()%>" required>
+	<br>
 	<input type="submit" value="Enviar">
 </form>
 

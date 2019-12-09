@@ -9,5 +9,6 @@
 %>
 
 <a href="perros"> CRUD Perros </a>
+<a href="perros02"> CRUD Perros con JSTL </a>
 
 <%@include file="includes/piepagina.jsp"%>
