@@ -1,6 +1,8 @@
 package com.ipartek.controller;
 
 import java.io.IOException;
+
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,8 +40,15 @@ public class DatosFormulario extends HttpServlet {
 			// Recuperar Sesion del Usuario
 			HttpSession session = request.getSession();
 			session.setAttribute("usuarioLogeado", "Administrador");
-			session.setAttribute("idioma", idioma);
+			// session.setAttribute("idioma", idioma);
 			session.setMaxInactiveInterval(-1);
+			
+			// Recuperar el ambito de session de los usuarios y añadir el nuevo usuario 
+			// ServletContext == applicationScope en el JSP 
+			// ServletContext applicationScope = request.getServletContext();
+			// int numeroUsuarios = (int) applicationScope.getAttribute("numeroUsuariosConectados");
+			// numeroUsuarios++;
+			// applicationScope.setAttribute("numeroUsuariosConectados", numeroUsuarios);
 			
 			switch (idioma) {
 			case "castellano":

@@ -1,3 +1,7 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+
 <!DOCTYPE html> <!-- Esto quiere decir que es HTML5 -->
 <html lang="es">
     <head>
@@ -28,16 +32,15 @@
     <section id="usuario">
     	<%
     		String usuario = (String)session.getAttribute("usuarioLogeado");
-    		String idioma = (String)session.getAttribute("idioma");
-    		
-    		if(usuario == null && idioma == null){
+    		if(usuario == null){
     			%> <a href="login.jsp"> Por favor Inicia Sesion </a> <% 
     		} else {
     	%>
 		    	<p> Usuario: <%=usuario%> </p>
-		    	<p> Idioma: <%=idioma%> </p>
 		    	<p> <a href="logout"> Cerrar Sesión </a></p>
 		 <% } %>
+		 
+		<p> Usuarios Conectados ${applicationScope.numeroUsuariosConectados} </p>
     </section>
 
         
