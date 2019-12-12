@@ -82,8 +82,9 @@ public class SeguridadFilter implements Filter {
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
 		LOG.trace("init");
-		fConfig.getServletContext().setAttribute("numerodeUsuariosIndebidos", 0);
-		fConfig.getServletContext().setAttribute("ips", HashSet<String>());
+		ServletContext sc = fConfig.getServletContext();
+		sc.setAttribute("numerodeUsuariosIndebidos", 0);
+		sc.setAttribute("ips", new HashSet<String>());
 	}
 
 }

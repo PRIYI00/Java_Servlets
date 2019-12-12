@@ -30,6 +30,7 @@ public class AppListener implements ServletContextListener {
      */
     public void contextInitialized(ServletContextEvent sce)  { 
     	LOG.info("La App se ha arrancado.");
+    	
     	// sc == applicationScope
     	ServletContext sc = sce.getServletContext();
     	sc.setAttribute("numeroUsuariosConectados", 0);
