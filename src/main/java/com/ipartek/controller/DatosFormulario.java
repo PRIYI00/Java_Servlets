@@ -28,6 +28,7 @@ public class DatosFormulario extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String vista = "";
 		
 		// Recibir el Nombre y la Contraseña del Formulario
 		String nombre = request.getParameter("nombre");
@@ -40,15 +41,8 @@ public class DatosFormulario extends HttpServlet {
 			// Recuperar Sesion del Usuario
 			HttpSession session = request.getSession();
 			session.setAttribute("usuarioLogeado", "Administrador");
-			// session.setAttribute("idioma", idioma);
+			session.setAttribute("idioma", idioma);
 			session.setMaxInactiveInterval(-1);
-			
-			// Recuperar el ambito de session de los usuarios y añadir el nuevo usuario 
-			// ServletContext == applicationScope en el JSP 
-			// ServletContext applicationScope = request.getServletContext();
-			// int numeroUsuarios = (int) applicationScope.getAttribute("numeroUsuariosConectados");
-			// numeroUsuarios++;
-			// applicationScope.setAttribute("numeroUsuariosConectados", numeroUsuarios);
 			
 			switch (idioma) {
 			case "castellano":
@@ -70,10 +64,18 @@ public class DatosFormulario extends HttpServlet {
 				request.setAttribute("recuerdame", "NO Has Sido Recordado");
 			}
 			
-			request.getRequestDispatcher("usupass.jsp").forward(request, response);
+			//vista = "private/home";
+			//request.getRequestDispatcher(vista).forward(request, response);
+			
+			String base = request.getContextPath();
+			response.sendRedirect(base + "/private/home");
+			
+			// Esto es sin el BackOfficeController
+			// request.getRequestDispatcher("usupass.jsp").forward(request, response);
 		} else {
 			request.setAttribute("mensaje", "No te has logueado Correctamente");
-			request.getRequestDispatcher("index.jsp").forward(request, response);
+			vista = "login.jsp";
+			request.getRequestDispatcher(vista).forward(request, response);
 		}
 		
 	}

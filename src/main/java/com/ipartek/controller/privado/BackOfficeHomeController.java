@@ -1,20 +1,17 @@
-package com.ipartek.controller;
+package com.ipartek.controller.privado;
 
 import java.io.IOException;
-import java.net.URLEncoder;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class LogOutController
+ * Servlet implementation class BackOfficeHomeController
  */
-@WebServlet("/logout")
-public class LogOutController extends HttpServlet {
+@WebServlet({"/private/home", "/private/home/"})
+public class BackOfficeHomeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -28,16 +25,8 @@ public class LogOutController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession();
-		
-		session.removeAttribute("usuarioLogeado");
-		
-		session.invalidate();
-		session = null; 
-		
-		String mensaje = "Gracias por Visitarnos";
-		String base = request.getContextPath();
-		response.sendRedirect(base + "/login?mensaje=" + URLEncoder.encode(mensaje, "UTF-8"));
+		request.setAttribute("atributoDesdeServlet", "Manolin");
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
 }

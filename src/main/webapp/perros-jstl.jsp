@@ -12,7 +12,6 @@
 <c:if test="${empty perroEditar}">
 	No tenemos perro para Editar, vamos a inicializarlo
 	<jsp:useBean id="perroEditar" class="com.ipartek.modelo.pojos.Perro"></jsp:useBean>
-	
 </c:if>
 
 <br>

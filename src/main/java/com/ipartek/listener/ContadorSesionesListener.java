@@ -4,6 +4,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpSessionAttributeListener;
 import javax.servlet.http.HttpSessionBindingEvent;
+import javax.servlet.http.HttpSessionEvent;
 
 import org.apache.log4j.Logger;
 
@@ -20,11 +21,13 @@ public class ContadorSesionesListener implements HttpSessionAttributeListener {
      * @see HttpSessionAttributeListener#attributeAdded(HttpSessionBindingEvent)
      */
     public void attributeAdded(HttpSessionBindingEvent event)  { 
-    	LOG.debug("attributeAdded " + event.getName() + " " + event.getValue() );
-    	ServletContext sc = event.getSession().getServletContext();
-    	int numeroUsuarios = (int)sc.getAttribute("numeroUsuariosConectados");
-    	numeroUsuarios++;
-    	sc.setAttribute("numeroUsuariosConectados", numeroUsuarios);
+    	LOG.debug("attributeAdded " + event.getName() + " " + event.getValue());
+    	if ("usuarioLogeado".equals(event.getName())) {
+    		ServletContext sc = event.getSession().getServletContext();
+        	int numeroUsuarios = (int)sc.getAttribute("numeroUsuariosConectados");
+        	numeroUsuarios++;
+        	sc.setAttribute("numeroUsuariosConectados", numeroUsuarios);
+		}
     }
 
 	/**
@@ -32,10 +35,12 @@ public class ContadorSesionesListener implements HttpSessionAttributeListener {
      */
     public void attributeRemoved(HttpSessionBindingEvent event)  { 
     	LOG.debug("attributeAdded " + event.getName() + " " + event.getValue() );
-    	ServletContext sc = event.getSession().getServletContext();
-    	int numeroUsuarios = (int)sc.getAttribute("numeroUsuariosConectados");
-    	numeroUsuarios--;
-    	sc.setAttribute("numeroUsuariosConectados", numeroUsuarios);
+    	if ("usuarioLogeado".equals(event.getName())) {
+    		ServletContext sc = event.getSession().getServletContext();
+        	int numeroUsuarios = (int)sc.getAttribute("numeroUsuariosConectados");
+        	numeroUsuarios--;
+        	sc.setAttribute("numeroUsuariosConectados", numeroUsuarios);
+		}
     }
 
 	/**
@@ -44,5 +49,5 @@ public class ContadorSesionesListener implements HttpSessionAttributeListener {
     public void attributeReplaced(HttpSessionBindingEvent event)  { 
     	LOG.debug("attributeAdded " + event.getName() + " " + event.getValue() );
     }
-	
+
 }
