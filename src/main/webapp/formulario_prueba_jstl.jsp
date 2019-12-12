@@ -11,6 +11,7 @@
 <ul>
 		<li> ${nombre} </li>
 		<li> ${email} </li>
+		<li> ${selected} </li>
 	<c:forEach items="${deportes}" var="deporte">
   		<li> ${deporte} </li>
   	</c:forEach>

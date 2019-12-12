@@ -34,6 +34,7 @@ public class FormularioController extends HttpServlet {
 		// Recibir el Nombre, Email y los Deportes
 		String nombre = request.getParameter("nombre_formulario");
 		String email = request.getParameter("email_formulario");
+		String selected = request.getParameter("sexo");
 		String[] deportes = request.getParameterValues("deportes_formulario");
 		
 		String mensaje = "";
@@ -43,6 +44,7 @@ public class FormularioController extends HttpServlet {
 			request.setAttribute("mensaje", "Has enviado estos Datos");
 			request.setAttribute("nombre", nombre);
 			request.setAttribute("email", email);
+			request.setAttribute("selected", selected);
 			request.setAttribute("deportes", deportes);
 			
 			request.getRequestDispatcher("formulario_prueba_jstl.jsp").forward(request, response);
@@ -50,6 +52,7 @@ public class FormularioController extends HttpServlet {
 		} else { // Ha seleccionado menos de tres deportes
 			request.setAttribute("nombre", nombre);
 			request.setAttribute("email", email);
+			request.setAttribute("selected", selected);
 			request.setAttribute("mensaje", "No has Seleccionado tres deportes");
 			
 			request.getRequestDispatcher("formulario_prueba.jsp").forward(request, response);

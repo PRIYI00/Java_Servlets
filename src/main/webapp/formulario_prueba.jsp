@@ -26,6 +26,16 @@
 			<input type="text" name="nombre_formulario" value="${nombre}" placeholder="Dime tu Nombre"> <br>
 			<label for="email_formulario"> Email: 
 			</label> <input type="email" name="email_formulario" value="${email}"> <br>
+			
+			
+			<% String selected = (String)request.getAttribute("selected"); %>
+			<p> <%=selected%> </p>	
+				<select name="sexo">
+					<option value="H" selected> Hombre </option>
+					<option value="M" selected> Mujer </option>
+					<option value="I" selected> Indefinido </option>
+				</select> <br>		
+			
 			<label for="deportes_formulario"> Aficiones Deportivas: </label> <br>
 			<input type="checkbox" name="deportes_formulario" value="Baloncesto"> Baloncesto <br>
 			<input type="checkbox" name="deportes_formulario" value="Futbol"> Futbol <br>
