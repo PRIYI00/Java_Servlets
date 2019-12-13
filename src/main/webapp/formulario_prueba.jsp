@@ -30,12 +30,27 @@
 			
 			<% String selected = (String)request.getAttribute("selected"); %>
 			<p> <%=selected%> </p>	
+			
+			<% if("H".equals(selected)){ %>
 				<select name="sexo">
 					<option value="H" selected> Hombre </option>
+					<option value="M"> Mujer </option>
+					<option value="I"> Indefinido </option>
+				</select> <br> <br>
+			<% } else if("M".equals(selected)){ %>
+				<select name="sexo">
+					<option value="H"> Hombre </option>
 					<option value="M" selected> Mujer </option>
+					<option value="I"> Indefinido </option>
+				</select> <br> <br>
+			<% } else { %>
+				<select name="sexo">
+					<option value="H"> Hombre </option>
+					<option value="M"> Mujer </option>
 					<option value="I" selected> Indefinido </option>
-				</select> <br>		
-			
+				</select> <br> <br>
+			<% } %>
+					
 			<label for="deportes_formulario"> Aficiones Deportivas: </label> <br>
 			<input type="checkbox" name="deportes_formulario" value="Baloncesto"> Baloncesto <br>
 			<input type="checkbox" name="deportes_formulario" value="Futbol"> Futbol <br>

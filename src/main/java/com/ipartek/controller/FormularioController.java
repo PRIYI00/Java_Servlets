@@ -39,26 +39,31 @@ public class FormularioController extends HttpServlet {
 		
 		String mensaje = "";
 		
-		// Comprobar que ha seleccionado tres Deportes
-		if (deportes != null && deportes.length >= 3) { // Comprobacion Correcta
-			request.setAttribute("mensaje", "Has enviado estos Datos");
-			request.setAttribute("nombre", nombre);
-			request.setAttribute("email", email);
-			request.setAttribute("selected", selected);
-			request.setAttribute("deportes", deportes);
-			
-			request.getRequestDispatcher("formulario_prueba_jstl.jsp").forward(request, response);
-			
-		} else { // Ha seleccionado menos de tres deportes
-			request.setAttribute("nombre", nombre);
-			request.setAttribute("email", email);
-			request.setAttribute("selected", selected);
-			request.setAttribute("mensaje", "No has Seleccionado tres deportes");
-			
-			request.getRequestDispatcher("formulario_prueba.jsp").forward(request, response);
-			
-		}
+		try {
 		
+			// Comprobar que ha seleccionado tres Deportes
+			if (deportes != null && deportes.length >= 3) { // Comprobacion Correcta
+				request.setAttribute("mensaje", "Has enviado estos Datos");
+				request.setAttribute("nombre", nombre);
+				request.setAttribute("email", email);
+				request.setAttribute("selected", selected);
+				request.setAttribute("deportes", deportes);
+				
+				request.getRequestDispatcher("formulario_prueba_jstl.jsp").forward(request, response);
+				
+			} else { // Ha seleccionado menos de tres deportes
+				request.setAttribute("nombre", nombre);
+				request.setAttribute("email", email);
+				request.setAttribute("selected", selected);
+				request.setAttribute("mensaje", "No has Seleccionado tres deportes");
+				
+				request.getRequestDispatcher("formulario_prueba.jsp").forward(request, response);
+			}
+		
+		} catch (Exception e) {
+			LOG.trace("Ha ocurrido un Error");
+			request.getRequestDispatcher("pagina404.jsp").forward(request, response);
+		}
 		
 	}
 
